@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: "pick", component: SelectmenuComponent },
   { path: "display", component: ScoreComponent },
 
-  {path: "**", redirectTo: "pick"}
+  {path: "**", redirectTo: "pick"} //defaults to selectmenu component
   
 ];
 

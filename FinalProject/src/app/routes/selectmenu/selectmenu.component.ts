@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../../game.service';
 
 @Component({
   selector: 'app-selectmenu',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectmenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
+  }
+
+  selectOption(option: 'rock' | 'paper' | 'scissors'){
+    this.gameService.commitSelection(option);
+
   }
 
 }
