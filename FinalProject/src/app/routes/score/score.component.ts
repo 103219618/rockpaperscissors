@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { GameService } from '../../game.service';
+import { GameService } from 'src/app/game.service';
 
 @Component({
   selector: 'app-score',
@@ -13,9 +13,12 @@ export class ScoreComponent implements OnInit {
   constructor(public gameService: GameService, private router: Router) { }
 
   ngOnInit(): void {
-    if(this.gameService.selection == null) {
-      this.router.navigateByUrl("/pick") // defaults to selectmenu when manually entering page
-    }    
+    
+    }
   }
 
-}
+
+/*ngOnInit(): void {
+  if (this.gameService.selection == null) {
+    this.router.navigateByUrl("/pick") // defaults to selectmenu when manually entering page
+    }*/

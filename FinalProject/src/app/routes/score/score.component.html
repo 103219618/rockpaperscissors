@@ -1,3 +1,13 @@
+<div class="">
+    <div class="" id="">Player: {{gameService.playerSelected}}</div>
+    <div class="" id="">Comp: {{gameService.comSelected}}</div>
+    <span id="">{{gameService.playerScore}}</span>:<span id="">{{gameService.comScore}}</span>
+</div>
+
+<div class="">
+    <p *ngIf="gameService.status">{{gameService.playerSelected}} {{gameService.action}} {{gameService.playerSelected}}{{gameService.status}} </p>
+  
+
 <h1>{{gameService.selection}}</h1>
 
 <a routerLink='pick'>Play Again?</a>
