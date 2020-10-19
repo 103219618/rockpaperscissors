@@ -8,7 +8,7 @@ import { delay } from 'rxjs/operators';
 })
 export class GameService {
 
-  private _selection?: 'rock' | 'paper' | 'scissors'; //using _ for private as public selection is used below
+  private _selection?: 'Rock' | 'Paper' | 'Scissors'; //using _ for private as public selection is used below
   //private selection: 'rock' | 'paper' | 'scissors' | null; //same as above
 
 
@@ -20,7 +20,7 @@ export class GameService {
 
 
   commitSelection(selectOption) {
-    of(null).pipe(delay(500 /*delay of 0.5 seconds*/)).subscribe(() => {
+    of(null).pipe(delay(0 /*delay of 0 seconds*/)).subscribe(() => {
       this._selection = selectOption;
       this.selectOption(this.selection);
       this.router.navigateByUrl("/display");
@@ -34,9 +34,9 @@ export class GameService {
     action: string; //is known whether user weapon beats or loses to computer
     status: string; //know whether it's a win or lose
     comWeapon = [
-      'rock',
-      'paper',
-      'scissors'
+      'Rock',
+      'Paper',
+      'Scissors'
     ];
 
     //userPick function which is executed whenever a 'weapon' is clicked
@@ -48,7 +48,7 @@ export class GameService {
       this.comSelected = this.comWeapon[randomNum];
       console.log(this.comSelected);
       this.checkResult();
-    }, 1000);
+    }, 100);
 
   }
 
@@ -58,7 +58,7 @@ export class GameService {
       this.status = '';
       this.playerSelected = '';
       this.comSelected = '';
-    }, 10000);
+    }, 1000);
   }
 
   //calls winner on user or comp based on the results
@@ -66,9 +66,9 @@ export class GameService {
     this.playerScore++;
     this.playerSelected = player;
     this.comSelected = com;
-    this.action = 'beats';
-    this.status = '. You win!';
-    this.clearField();
+    this.action = 'Beats';
+    this.status = '. You Win!';
+    //this.clearField();
   }
 
   //calls looser on user or comp based on the results
@@ -76,39 +76,38 @@ export class GameService {
     this.comScore++;
     this.playerSelected = player;
     this.comSelected = com;
-    this.action = 'loses to';
-    this.status = '. You lose!';
-    this.clearField();
+    this.action = 'Loses to';
+    this.status = '. You Lose!';
+    //this.clearField();
   }
 
   //calls draw based on the result
   draw(player, com) {
     this.playerSelected = player;
     this.comSelected = com;
-    this.action = 'and';
-    this.status = '. You draw!';
-    this.clearField();
+    this.action = '&';
+    this.status = '. You Draw!';
+    //this.clearField();
   }
 
   checkResult() {
     const playerChoice = this.playerSelected;
     const comChoice = this.comSelected;
     switch (playerChoice + comChoice) {
-      case 'rockscissors':
-      case 'paperrock':
-      case 'scissorspaper':
+      case 'RockScissors':
+      case 'PaperRock':
+      case 'ScissorsPaper':
         this.win(playerChoice, comChoice);
         break;
-      case 'rockpaper':
-      case 'scissorsrock':
-      case 'paperscissors':
+      case 'RockPaper':
+      case 'ScissorsRock':
+      case 'PaperScissors':
         this.lose(playerChoice, comChoice);
         break;
       default:
         this.draw(playerChoice, comChoice);
         break;
-
     }
-  }
 
+  }
 }

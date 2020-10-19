@@ -13,12 +13,8 @@ export class ScoreComponent implements OnInit {
   constructor(public gameService: GameService, private router: Router) { }
 
   ngOnInit(): void {
+    /*if(this.gameService.selection == null)*/ 
+      //this.router.navigateByUrl("/pick") // defaults to selectmenu when manually entering page
     
-    }
   }
-
-
-/*ngOnInit(): void {
-  if (this.gameService.selection == null) {
-    this.router.navigateByUrl("/pick") // defaults to selectmenu when manually entering page
-    }*/
+}

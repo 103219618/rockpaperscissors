@@ -19,19 +19,17 @@ export class SelectmenuComponent implements OnInit {
   action: string;
   status: string;
   comWeapon = [
-    'rock',
-    'paper',
-    'scissors'
-  ]
+    'Rock',
+    'Paper',
+    'Scissors'
+  ];
 
   ngOnInit(): void {
   }
 
-  selectOption(playerWeapon: 'rock' | 'paper' | 'scissors'){
+  selectOption(playerWeapon: 'Rock' | 'Paper' | 'Scissors'){
     this.gameService.commitSelection(playerWeapon);
-
-  
-
+    
   }
 
 }
