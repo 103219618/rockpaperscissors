@@ -1,0 +1,17 @@
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/appsettings.Development.json
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/game_api.deps.json
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/game_api.runtimeconfig.json
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/game_api.runtimeconfig.dev.json
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/game_api.dll
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/bin/Debug/netcoreapp3.1/game_api.pdb
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.csprojAssemblyReference.cache
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.MvcApplicationPartsAssemblyInfo.cache
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.AssemblyInfoInputs.cache
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.AssemblyInfo.cs
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.RazorTargetAssemblyInfo.cache
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/staticwebassets/game_api.StaticWebAssets.Manifest.cache
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/staticwebassets/game_api.StaticWebAssets.xml
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.dll
+/Users/syedasimrazvi/Desktop/rockpaperscissors/game_api/obj/Debug/netcoreapp3.1/game_api.pdb
