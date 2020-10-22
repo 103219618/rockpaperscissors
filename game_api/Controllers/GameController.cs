@@ -19,7 +19,7 @@ namespace game_api.Controllers
             this.game.PlayerSelection(playerselection.PlayerChoice);
             this.game.Results();
             return game;
-            
+
         }
     }
 }

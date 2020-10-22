@@ -9,5 +9,9 @@ namespace game_api.models
         {
             this.PlayerChoice = playerChoice;
         }
+        public Player() //blank constructor
+        {
+            this.PlayerChoice = null;
+        }
     }
 }
