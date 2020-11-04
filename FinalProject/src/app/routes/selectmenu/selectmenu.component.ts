@@ -10,7 +10,7 @@ import { NgSelectOption } from '@angular/forms';
 export class SelectmenuComponent implements OnInit {
 
   constructor(private gameService: GameService) { }
-
+/*
   playerScore = 0;
   comScore = 0;
 
@@ -23,13 +23,13 @@ export class SelectmenuComponent implements OnInit {
     'Paper',
     'Scissors'
   ];
-
+*/
   ngOnInit(): void {
   }
 
   selectOption(playerWeapon: 'Rock' | 'Paper' | 'Scissors'){
+
     this.gameService.commitSelection(playerWeapon);
-    
   }
 
 }

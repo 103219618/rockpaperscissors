@@ -6,6 +6,7 @@ namespace game_api.models
         public string PlayerChoice { get; set; }
         public string ComChoice { get; set; }
         public string GameResult { get; set; }
+        public string UserName { get; set; }
 
         public void GenerateComSelection()
         {
@@ -14,10 +15,11 @@ namespace game_api.models
             this.ComChoice = ArrayChoice[random.Next(0,3)];
         }
 
-        public void PlayerSelection(string playerselection)
+        public void PlayerSelection(string playerselection, string username)
         {
-            Player p1 = new Player(playerselection);
+            Player p1 = new Player(playerselection, username);
             this.PlayerChoice = p1.PlayerChoice;
+            this.UserName = p1.UserName;
         }
 
         public void Results()

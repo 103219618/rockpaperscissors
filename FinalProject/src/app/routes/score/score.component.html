@@ -1,13 +1,16 @@
-<div class="">
-    <div class="" id="">Player: {{gameService.playerSelected}}</div>
-    <div class="" id="">Computer: {{gameService.comSelected}}</div>
-    <span id="">{{gameService.playerScore}}</span>:<span id="">{{gameService.comScore}}</span>
+<div class="mid">
+
+    <div class="box">
+        <div>Player {{gameService.username}}: <img src="assets/{{gameService.selection}}.png" width="100px" height="100px"></div>
+        <span>VS</span>
+        <div>Computer : <img src="assets/{{gameService.comChoice}}.png" width="100px" height="100px"></div>
+        <span>{{gameService.selection}}</span>:<span>{{gameService.comChoice}}</span>
+    </div>
+
+    <div class="box">
+        <p>{{gameService.result}}</p>
+    </div>
+
+    <a routerLink='pick'>Play Again?</a>
+
 </div>
-
-<div class="">
-    <p *ngIf="gameService.status">{{gameService.playerSelected}} {{gameService.action}} {{gameService.comSelected}}{{gameService.status}} </p>
-</div>
-
-<h1>{{gameService.selection}}</h1>
-
-<a routerLink='pick'>Play Again?</a>

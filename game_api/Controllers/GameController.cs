@@ -16,7 +16,7 @@ namespace game_api.Controllers
         [HttpPost]
         public Game PlayGame(Player playerselection)
         {
-            this.game.PlayerSelection(playerselection.PlayerChoice);
+            this.game.PlayerSelection(playerselection.PlayerChoice, playerselection.UserName);
             this.game.Results();
             return game;
 

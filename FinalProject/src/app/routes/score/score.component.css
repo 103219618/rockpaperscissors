@@ -1,0 +1,23 @@
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline;
+    cursor: pointer;
+}
+
+.box.rock {
+    background-color: grey;
+}
+
+.box.paper {
+    background-color: yellow;
+}
+
+.box.scissors {
+    background-color: orange;
+}
+
+.mid {
+    text-align: center;
+}

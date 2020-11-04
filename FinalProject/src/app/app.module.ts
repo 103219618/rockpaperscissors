@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SelectmenuComponent } from './routes/selectmenu/selectmenu.component';
 import { ScoreComponent } from './routes/score/score.component';
+import { UsernameComponent } from './routes/username/username.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     SelectmenuComponent,
-    ScoreComponent
+    ScoreComponent,
+    UsernameComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
