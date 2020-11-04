@@ -1,1 +1,12 @@
 <p>leaderboard works!</p>
+<div *ngFor="let lb of leaderboardservice.leaderboards">
+    <div>
+        <div class="inline">{{lb.username}}</div>
+        <p class="inline">||</p>
+        <div class="inline">{{lb.winRatio}}</div>
+        <p class="inline">||</p>
+        <div class="inline">{{lb.turnPlayed}}</div>
+        <p class="inline">||</p>
+    </div>
+
+</div>

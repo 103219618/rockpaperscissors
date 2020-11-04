@@ -2,7 +2,7 @@ export interface LeaderboardsEnvelope {
     leaderboards: Leaderboard[];
 }
 export interface Leaderboard {
-    userName: string;
+    username: string;
     winRatio: number;
     turnPlayed: number;
 }
