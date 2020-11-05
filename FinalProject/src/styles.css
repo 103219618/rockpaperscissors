@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 .bgcolor {
-    background-color: pink;
+    background-image: url("/assets/background.jpg");
+    background-size: 200px;
 }
 
 .center {

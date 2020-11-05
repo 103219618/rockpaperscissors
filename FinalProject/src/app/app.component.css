@@ -5,8 +5,8 @@
 }
 
 .out {
-    border: solid 1px;
-    border-radius: 5px;
+    border: solid 5px brown;
+    border-radius: 8px;
     width: fit-content;
     padding-bottom: 20px;
     margin: 20px auto;
