@@ -1,16 +1,27 @@
 <div class="mid">
 
     <div class="box">
-        <div>Player {{gameService.username}}: <img src="assets/{{gameService.selection}}.png" width="100px" height="100px"></div>
-        <span>VS</span>
-        <div>Computer : <img src="assets/{{gameService.comChoice}}.png" width="100px" height="100px"></div>
-        <span>{{gameService.selection}}</span>:<span>{{gameService.comChoice}}</span>
+        <h1>{{gameService.result}}</h1>
     </div>
 
     <div class="box">
-        <p>{{gameService.result}}</p>
+        <div class="inline">{{gameService.username}} <img src="assets/{{gameService.selection}}.png"
+                width="100px" height="100px"></div>
+
+        <div class="inline"><img src="assets/vs.png"
+                width="50px" height="50px"></div>
+
+        <div class="inline"><img src="assets/{{gameService.comChoice}}.png" width="100px" height="100px">
+        </div>
+
     </div>
 
-    <a routerLink='pick'>Play Again?</a>
+    <div class="box">
+        <p>{{gameService.username}} {{gameService.selection}} : {{gameService.comChoice}}</p>
+    </div>
+
+
+
+    <button routerLink='pick'>Try Again?</button>
 
 </div>

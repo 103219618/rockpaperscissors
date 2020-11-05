@@ -6,17 +6,12 @@
     cursor: pointer;
 }
 
-.box.rock {
-    background-color: grey;
+.inline {
+    display: inline;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.box.paper {
-    background-color: yellow;
-}
-
-.box.scissors {
-    background-color: orange;
-}
 
 .mid {
     text-align: center;

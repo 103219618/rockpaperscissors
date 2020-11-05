@@ -1,0 +1,13 @@
+.mid {
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+
+.out {
+    border: solid 1px;
+    border-radius: 5px;
+    width: fit-content;
+    padding-bottom: 20px;
+    margin: 20px auto;
+}

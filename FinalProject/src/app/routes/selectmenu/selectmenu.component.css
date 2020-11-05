@@ -2,21 +2,12 @@
     width: 100px;
     height: 100px;
     margin: 20px;
-    display: inline-block;
+    display: inline;
     cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.box.rock {
-    background-color: grey;
-}
-
-.box.paper {
-    background-color: yellow;
-}
-
-.box.scissors {
-    background-color: orange;
-}
 
 .mid {
     text-align: center;
