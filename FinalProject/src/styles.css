@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 .bgcolor {
     background-image: url("/assets/background.jpg");
-    background-size: 200px;
+    background-size: 40%;
+    font-family: 'Indie Flower', cursive;
 }
 
 .center {
     text-align: center;
+    font-size: 60px;
 }

@@ -45,7 +45,7 @@ namespace game_api.models
             this.GameResult = "You Lose!";
             }
             else {
-            this.GameResult = "Draw";
+            this.GameResult = "Draw!";
             }
         }
     }
