@@ -66,9 +66,8 @@ export class GameService {
     request.subscribe((response) => {
       console.log(response);
       this._roundsSelect = response.roundsSelect;
-      console.log(response)
 
-      this.router.navigateByUrl("/selectmenu");
+      this.router.navigateByUrl("/pick");
     });
 
 

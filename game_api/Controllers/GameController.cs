@@ -18,6 +18,9 @@ namespace game_api.Controllers
         {
             this.game.PlayerSelection(playerselection.PlayerChoice, playerselection.UserName);
             this.game.Results();
+
+            this.game.RoundsSelection (game.noRound);
+
             return game;
 
         }

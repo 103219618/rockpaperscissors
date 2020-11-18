@@ -8,6 +8,9 @@ namespace game_api.models
         public string GameResult { get; set; }
         public string UserName { get; set; }
 
+        public string selectRounds { get; set; }
+        public string noRound;
+
         public void GenerateComSelection()
         {
             string[] ArrayChoice = { "Rock", "Paper", "Scissors" };
@@ -15,12 +18,20 @@ namespace game_api.models
             this.ComChoice = ArrayChoice[random.Next(0,3)];
         }
 
+
+
         public void PlayerSelection(string playerselection, string username)
         {
             Player p1 = new Player(playerselection, username);
             this.PlayerChoice = p1.PlayerChoice;
             this.UserName = p1.UserName;
         }
+
+        public void RoundsSelection(string noRound)
+        {
+            this.selectRounds = noRound;
+        }
+
 
         public void Results()
         {
