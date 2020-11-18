@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { GameResult, PlayerChoice } from './classes/game';
+import { GameResult, PlayerChoice, RoundsSelect } from './classes/game';
+import { SelectmenuComponent } from './routes/selectmenu/selectmenu.component';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,8 @@ export class GameService {
   //private selection: 'rock' | 'paper' | 'scissors' | null; //same as above
   private _comChoice?: string;
   private _result?: string;
+  
+  private _roundsSelect?: string;
 
   public username: string;
 
@@ -27,6 +30,10 @@ export class GameService {
 
   get result() {
     return this._result;
+  }
+
+  get roundsSelection() {
+    return this. _roundsSelect;
   }
 
   constructor(private router: Router, private httpclient: HttpClient) { }
@@ -45,6 +52,23 @@ export class GameService {
       this._result = response.gameResult;
 
       this.router.navigateByUrl("/display");
+    });
+
+
+  }
+
+  commitRoundSelection(roundsSelect: string) {
+
+    let request = this.httpclient.post<RoundsSelect>("http://localhost:5000/Game", {
+      roundsSelect: this._roundsSelect
+    } as RoundsSelect);
+    console.log(this._roundsSelect);
+    request.subscribe((response) => {
+      console.log(response);
+      this._roundsSelect = response.roundsSelect;
+      console.log(response)
+
+      this.router.navigateByUrl("/selectmenu");
     });
 
 

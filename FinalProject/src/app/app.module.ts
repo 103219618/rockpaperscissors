@@ -9,6 +9,7 @@ import { UsernameComponent } from './routes/username/username.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { LeaderboardComponent } from './routes/leaderboard/leaderboard.component';
+import { RoundsComponent } from './routes/rounds/rounds/rounds.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LeaderboardComponent } from './routes/leaderboard/leaderboard.component
     SelectmenuComponent,
     ScoreComponent,
     UsernameComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    RoundsComponent
   ],
   imports: [
     BrowserModule,

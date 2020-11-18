@@ -24,5 +24,9 @@ export interface GameResultAndUserName {
     "playerChoice": string,
     "comChoice": string,
     "gameResult": string
+}
 
+export interface RoundsSelect {
+    "userName": UserName,
+    "roundsSelect": string
 }
