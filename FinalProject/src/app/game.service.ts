@@ -15,9 +15,10 @@ export class GameService {
   //private selection: 'rock' | 'paper' | 'scissors' | null; //same as above
   private _comChoice?: string;
   private _result?: string;
-  public roundsSelect?: number;
-  public username?: string;
+  public roundsSelect: number;
+  public username: string;
   public userselectionArray:PlayerChoice[] = [];
+  public gameresultArray: any = [];
 
 
   get selection() {
@@ -34,31 +35,30 @@ export class GameService {
 
   constructor(private router: Router, private httpclient: HttpClient) { }
 
-  /*adduserselectiontoArray(userselected: string, maxrounds: number, roundcounter: number){
+  adduserselectiontoArray(userselected: string, maxrounds: number, roundcounter: number){
     let Data = {
       playerChoice: userselected,
-      playerName: this.username,
+      userName: this.username,
       currentRound: roundcounter,
-      maxRound: maxrounds
+      maxRound: this.roundsSelect
     }
 
     this.userselectionArray.push(Data);
-  }*/
+  }
 
 
   commitSelection(selectOption) {
 
-    let request = this.httpclient.post<GameResult>("http://localhost:5000/Game", {
-      playerChoice: selectOption,
-      userName: this.username
-    } as PlayerChoice);
+    let request = this.httpclient.post<GameResult>("http://localhost:5000/Game", this.userselectionArray);
     request.subscribe((response) => {
       console.log(response);
-      this._selection = response.playerChoice;
-      this._comChoice = response.comChoice;
-      this._result = response.gameResult;
+      this.gameresultArray = response;
+      
+      //this._selection = response.playerChoice;
+      //this._comChoice = response.comChoice;
+      //this._result = response.gameResult;
 
-      this.router.navigateByUrl("/display");
+      //this.router.navigateByUrl("/display");
     });
 
 

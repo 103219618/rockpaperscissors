@@ -4,14 +4,15 @@
         <h1>{{gameService.result}}</h1>
     </div>
 
-    <div class="box">
-        <div class="inline"><img src="assets/{{gameService.selection}}.png"
+    <div class="box" *ngFor = "let res of gameService.gameresultArray">
+
+        <div class="inline"><img src="assets/{{res.PlayerChoice}}.png"
                 width="100px" height="100px"></div>
 
         <div class="inline"><img src="assets/vs.png"
                 width="80px" height="80px"></div>
 
-        <div class="inline"><img src="assets/{{gameService.comChoice}}.png" width="100px" height="100px">
+        <div class="inline"><img src="assets/{{res.ComChoice}}.png" width="100px" height="100px">
         </div>
 
     </div>
