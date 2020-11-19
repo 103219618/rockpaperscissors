@@ -30,3 +30,9 @@ export interface RoundsSelect {
     "userName": UserName,
     "roundsSelect": string
 }
+export interface PlayerChoice {
+    playerChoice: string;
+    playerName: string;
+    currentRound: number;
+    maxRound: number;
+}

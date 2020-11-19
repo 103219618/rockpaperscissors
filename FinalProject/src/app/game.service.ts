@@ -15,10 +15,10 @@ export class GameService {
   //private selection: 'rock' | 'paper' | 'scissors' | null; //same as above
   private _comChoice?: string;
   private _result?: string;
-  
-  private _roundsSelect?: string;
+  public roundsSelect?: number;
+  public username?: string;
+  public userselectionArray:PlayerChoice[] = [];
 
-  public username: string;
 
   get selection() {
     return this._selection;
@@ -32,11 +32,18 @@ export class GameService {
     return this._result;
   }
 
-  get roundsSelection() {
-    return this. _roundsSelect;
-  }
-
   constructor(private router: Router, private httpclient: HttpClient) { }
+
+  /*adduserselectiontoArray(userselected: string, maxrounds: number, roundcounter: number){
+    let Data = {
+      playerChoice: userselected,
+      playerName: this.username,
+      currentRound: roundcounter,
+      maxRound: maxrounds
+    }
+
+    this.userselectionArray.push(Data);
+  }*/
 
 
   commitSelection(selectOption) {
@@ -57,7 +64,7 @@ export class GameService {
 
   }
 
-  commitRoundSelection(roundsSelect: string) {
+  /*commitRoundSelection(roundsSelect: number) {
 
     let request = this.httpclient.post<RoundsSelect>("http://localhost:5000/Game", {
       roundsSelect: this._roundsSelect
@@ -71,5 +78,5 @@ export class GameService {
     });
 
 
-  }
+  }*/
 }

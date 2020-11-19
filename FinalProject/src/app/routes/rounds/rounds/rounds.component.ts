@@ -10,14 +10,17 @@ import { Router } from '@angular/router';
 })
 export class RoundsComponent implements OnInit {
 
-  constructor(private gameService: GameService) { }
+  constructor(private gameService: GameService, public router: Router) { }
 
   ngOnInit(): void {
   }
 
-  roundOption(roundsSelect: '1' | '3' | '5'){
+  roundOption(roundsSelect: 1 | 3 | 5){
 
-    this.gameService.commitRoundSelection(roundsSelect);
+    this.gameService.roundsSelect = roundsSelect;
+    this.router.navigateByUrl("/pick");
+  
+
   }
 
 }

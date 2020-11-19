@@ -9,7 +9,7 @@ import { NgSelectOption } from '@angular/forms';
 })
 export class SelectmenuComponent implements OnInit {
 
-  constructor(private gameService: GameService) { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit(): void {
   }
