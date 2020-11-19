@@ -8,12 +8,12 @@ namespace game_api.models
         public int maxRounds { get; set; }
 
         //constructor
-        public Player(string playerChoice, string username, int currentround, int maxround)
+        public Player(string playerChoice, string username, int currentround, int maxrounds)
         {
             this.PlayerChoice = playerChoice;
             this.UserName = username;
             this.currentRound = currentround;
-            this.maxRounds = maxRounds;
+            this.maxRounds = maxrounds;
         }
         public Player() //blank constructor
         {

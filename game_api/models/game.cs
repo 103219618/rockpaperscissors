@@ -23,13 +23,13 @@ namespace game_api.models
 
 
 
-        public void PlayerSelection(string playerselection, string username, int currentround, int maxround)
+        public void PlayerSelection(string playerselection, string username, int currentround, int maxrounds)
         {
             //Player p1 = new Player(playerselection, username);
             this.PlayerChoice = playerselection;
             this.UserName = username;
             this.CurrentRound = currentround;
-            this.MaxRounds = maxround;
+            this.MaxRounds = maxrounds;
         }
 
         /*
