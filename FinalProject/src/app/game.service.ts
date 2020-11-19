@@ -40,7 +40,7 @@ export class GameService {
       playerChoice: userselected,
       userName: this.username,
       currentRound: roundcounter,
-      maxRound: this.roundsSelect
+      maxRounds: maxrounds
     }
 
     this.userselectionArray.push(Data);
@@ -49,7 +49,7 @@ export class GameService {
 
   commitSelection(selectOption) {
 
-    let request = this.httpclient.post<GameResult>("http://localhost:5000/Game", this.userselectionArray);
+    let request = this.httpclient.post<GameResult>("http://localhost:5000/Game/rounds", this.userselectionArray);
     request.subscribe((response) => {
       console.log(response);
       this.gameresultArray = response;

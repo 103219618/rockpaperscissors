@@ -7,9 +7,12 @@ namespace game_api.models
         public string ComChoice { get; set; }
         public string GameResult { get; set; }
         public string UserName { get; set; }
-
-        public string selectRounds { get; set; }
+        public int MaxRounds { get; set; }
+        public int CurrentRound { get; set; }
+        public string FinalGameResult { get; set; }
         public string noRound;
+        public int userscore;
+        public int comscore;
 
         public void GenerateComSelection()
         {
@@ -20,17 +23,21 @@ namespace game_api.models
 
 
 
-        public void PlayerSelection(string playerselection, string username)
+        public void PlayerSelection(string playerselection, string username, int currentround, int maxround)
         {
-            Player p1 = new Player(playerselection, username);
-            this.PlayerChoice = p1.PlayerChoice;
-            this.UserName = p1.UserName;
+            //Player p1 = new Player(playerselection, username);
+            this.PlayerChoice = playerselection;
+            this.UserName = username;
+            this.CurrentRound = currentround;
+            this.MaxRounds = maxround;
         }
 
+        /*
         public void RoundsSelection(string noRound)
         {
             this.selectRounds = noRound;
         }
+        */
 
 
         public void Results()
@@ -46,6 +53,18 @@ namespace game_api.models
             }
             else {
             this.GameResult = "Draw!";
+            }
+        }
+
+        public void GenerateFinalGameResult(){
+            
+            if(this.userscore > this.comscore){
+                this.FinalGameResult = "Win!";
+            }
+            else if (this.userscore < this.comscore){
+                this.FinalGameResult = "Lose!";
+            }else{
+                this.FinalGameResult = "Draw!";
             }
         }
     }

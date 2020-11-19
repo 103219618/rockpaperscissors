@@ -34,5 +34,5 @@ export interface PlayerChoice {
     playerChoice: string;
     userName: string;
     currentRound: number;
-    maxRound: number;
+    maxRounds: number;
 }

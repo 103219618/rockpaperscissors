@@ -6,20 +6,23 @@
 
     <div class="box" *ngFor = "let res of gameService.gameresultArray">
 
-        <div class="inline"><img src="assets/{{res.PlayerChoice}}.png"
+        <div class="inline"><img src="assets/{{res.playerChoice}}.png"
                 width="100px" height="100px"></div>
 
         <div class="inline"><img src="assets/vs.png"
                 width="80px" height="80px"></div>
 
-        <div class="inline"><img src="assets/{{res.ComChoice}}.png" width="100px" height="100px">
+        <div class="inline"><img src="assets/{{res.comChoice}}.png" width="100px" height="100px">
         </div>
+        <h3>{{gameService.username}} Selection {{res.playerChoice}} : Computer Selection {{res.comChoice}}</h3>
+    </div> <br>
 
-    </div>
+    <ng-container *ngFor="let fr of gameService.gameresultArray">
+        <div *ngIf="fr.finalGameResult !== null">
+            <h2>Result: {{fr.finalGameResult}}</h2>
+        </div>
+    </ng-container>
 
-    <div>
-        <h3>{{gameService.username}} Selected {{gameService.selection}} : Computer Selected {{gameService.comChoice}}</h3>
-    </div>
 
 
 
