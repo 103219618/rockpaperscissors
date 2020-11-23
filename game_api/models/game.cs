@@ -47,9 +47,13 @@ namespace game_api.models
             
             if (combineSelections == "RockScissors"  || combineSelections == "PaperRock" || combineSelections == "ScissorsPaper") {
             this.GameResult = "You Win!";
+            userscore++;
+
             }
             else if (combineSelections == "RockPaper"  || combineSelections == "ScissorsRock" || combineSelections == "PaperScissors") {
             this.GameResult = "You Lose!";
+            comscore++;
+            
             }
             else {
             this.GameResult = "Draw!";
