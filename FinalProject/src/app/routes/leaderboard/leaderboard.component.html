@@ -1,13 +1,22 @@
 <h1 class="mid">LEADER BOARD!</h1>
+<div class="mid">
+    <div class="inline">Username</div>
+    <!-- <p class="inline">||</p> -->
+    <div class="inline">Win Ratio</div>
+    <!-- <p class="inline">||</p> -->
+    <div class="inline">Turns Played</div>
+</div>
+
+
 <div *ngFor="let lb of leaderboardservice.leaderboards">
-    <div class = "mid">
-        <p class="inline">||</p>
+    <div class="mid">
+        <!-- <p class="inline">||</p> -->
         <div class="inline">{{lb.username}}</div>
-        <p class="inline">||</p>
+        <!-- <p class="inline">||</p> -->
         <div class="inline">{{lb.winRatio}}</div>
-        <p class="inline">||</p>
+        <!-- <p class="inline">||</p> -->
         <div class="inline">{{lb.turnPlayed}}</div>
-        <p class="inline">||</p>
+        <!-- <p class="inline">||</p> -->
     </div>
 
 </div>
