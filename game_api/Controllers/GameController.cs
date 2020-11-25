@@ -46,10 +46,10 @@ namespace game_api.Controllers
 
             foreach (var fr in GRounds)
             {   
-                if(fr.GameResult =="Win"){
+                if(fr.GameResult =="Win!"){
                 this.game.userscore++;
             }
-            else if (fr.GameResult == "Lose"){
+            else if (fr.GameResult == "Lose!"){
                 this.game.comscore++;
             }
             }
